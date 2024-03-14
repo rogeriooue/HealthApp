@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import Title from "../healthapp/src/components/Title/";
-import Form from "./src/components/Form";
+import Title from "../HealthApp/src/components/Title";
+import Form from "../HealthApp/src/components/Form";
 
 export default function App() {
   return (
