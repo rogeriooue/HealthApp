@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, Share } from "react-native";
 import styles from "../Resultimc/style.js";
 
+
 export default function Resultimc(props) {
 
     const onShare = async () => {
@@ -9,7 +10,6 @@ export default function Resultimc(props) {
             message: "Meu IMC hoje é: " + props.resultimc
         });
     }
-
 
     return (
         <View style={styles.contextimc}>

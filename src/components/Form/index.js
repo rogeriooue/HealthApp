@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, Vibration, Keyboard, Pressable
 import Resultimc from "../Form/Resultimc/index.js";
 import styles from "../Form/style.js";
 
+
 export default function Form() {
 
     const [height, setHeight] = useState(null);
@@ -16,9 +17,18 @@ export default function Form() {
     function imcCalculator() {
         let heightFormat = height.replace(",", ".");
         let weightFormat = weight.replace(",", ".");
-        let totalImc = (weightFormat / (heightFormat * heightFormat)).toFixed(2);
-        setImcList((arr) => [...arr, { id: new Date().getTime(), imc: totalImc }]);
-        setImc(totalImc);
+
+        if (!isNaN(heightFormat) && !isNaN(weightFormat)) {
+            if (heightFormat > 0 && heightFormat <= 3 && weightFormat > 0 && weightFormat <= 400) {
+                let totalImc = (weightFormat / (heightFormat * heightFormat)).toFixed(2);
+                setImcList((arr) => [...arr, { id: new Date().getTime(), imc: totalImc }]);
+                setImc(totalImc);
+            } else {
+                alert("Altura deve estar entre 0 e 3m e peso entre 0 e 400kg");
+            }
+        } else {
+            alert("Verifique os campos digitados de altura e peso");
+        }
     }
 
     function verificationImc() {
@@ -44,7 +54,6 @@ export default function Form() {
             setMessageImc("Preencha o peso e altura");
         }
     }
-
 
     return (
         <View style={styles.formContext}>
@@ -98,7 +107,7 @@ export default function Form() {
                     return (
                         <Text style={styles.resultImcItem}>
                             <Text style={styles.textResultItem}>Resultado IMC =  </Text>
-                            { item.imc }
+                            {item.imc}
                         </Text>
                     );
                 }}
