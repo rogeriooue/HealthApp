@@ -103,6 +103,7 @@ export default function Form() {
                 showsVerticalScrollIndicator={false}
                 style={styles.listImcs}
                 data={imcList.reverse()}
+                keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => {
                     return (
                         <Text style={styles.resultImcItem}>
@@ -111,11 +112,7 @@ export default function Form() {
                         </Text>
                     );
                 }}
-                keyExtractor={(item) => {
-                    item.id;
-                }}
-            >
-            </FlatList>
+            />
         </View>
     );
 }
