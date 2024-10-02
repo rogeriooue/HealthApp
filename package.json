@@ -10,7 +10,7 @@
   },
   "author": "Rogerio Oue",
   "dependencies": {
-    "expo": "^51.0.31",
+    "expo": "^51.0.35",
     "expo-status-bar": "~1.12.1",
     "healthapp": "file:",
     "react": "18.2.0",
