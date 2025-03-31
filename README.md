@@ -17,14 +17,6 @@ HealthApp é um aplicativo desenvolvido em **React Native** para calcular o Índ
 
 ---
 
-## Estrutura do Projeto
-
-A estrutura do projeto é organizada da seguinte forma:
-
-src/ ├── components/ │ ├── Form/ │ │ ├── index.js # Componente principal do formulário │ │ ├── style.js # Estilos do formulário │ │ ├── Resultimc/ │ │ │ ├── index.js # Componente para exibir o resultado do IMC │ │ │ ├── style.js # Estilos do resultado do IMC │ ├── Title/ │ ├── index.js # Componente para exibir o título do app │ ├── style.js # Estilos do título
-
----
-
 ## Componentes
 
 ### 1. **Form**
